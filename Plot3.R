@@ -4,7 +4,7 @@ unzip(".\\R\\Household_power_consumption.zip",exdir=".\\R")
 file<-".\\R\\household_power_consumption.txt"
 powerdata<-read.table(file, header = TRUE, sep = ";", stringsAsFactors = FALSE) 
 
-#powerdata1<- subset(powerdata)
+#Subset DF based on date
 powerdata1<- powerdata[which(powerdata$Date %in% c("1/2/2007", "2/2/2007")),]
 
 # Plot-3
